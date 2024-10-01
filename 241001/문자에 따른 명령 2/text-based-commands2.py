@@ -7,7 +7,7 @@ dy = [1, 0, -1, 0]
 
 for i in c:
     if i == 'L':
-        dir = (dir - 1) % 4
+        dir = (dir + 3) % 4
     elif i == 'R':
         dir = (dir + 1) % 4
     elif i == 'F':
