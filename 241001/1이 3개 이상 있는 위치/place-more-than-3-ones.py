@@ -16,17 +16,18 @@ def adj_cnt(x, y):
     cnt = 0
 
     for dx, dy in zip(dxs, dys):
-        x += dx
-        y += dy
-        if in_range(x,y) and arr[x][y] == 1:
+        nx = x + dx
+        ny = y + dy
+        if in_range(nx,ny) and arr[nx][ny] == 1:
             cnt += 1
     
     return cnt
 
+ans = 0
 
 for i in range(n):
     for j in range(n):
-        if adj_cnt(x, y) >= 3:
+        if adj_cnt(i, j) >= 3:
             ans += 1
 
 print(ans)
